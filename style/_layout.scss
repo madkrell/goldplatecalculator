@@ -1,0 +1,154 @@
+@use 'variables' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    text-align: left;
+    background: $bg-primary;
+    color: $text-primary;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: $space-md;
+}
+
+.wizard-container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+    padding-bottom: $space-2xl;
+}
+
+.app-header {
+    text-align: center;
+    padding: $space-lg 0 $space-sm;
+
+    h1 {
+        color: $gold-primary;
+        font-size: 1.75rem;
+        margin: 0;
+        letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+        color: $text-secondary;
+        font-size: 0.9rem;
+        margin: $space-xs 0 0;
+    }
+}
+
+.step-content {
+    background: $bg-card;
+    border-radius: $radius-lg;
+    padding: $space-xl;
+    min-height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.step {
+    h2 {
+        color: $gold-primary;
+        font-size: 1.3rem;
+        margin: 0 0 $space-sm;
+        border-bottom: 2px solid $gold-dark;
+        padding-bottom: $space-sm;
+    }
+
+    h3 {
+        color: $text-primary;
+        font-size: 1.1rem;
+        margin: $space-lg 0 $space-sm;
+    }
+
+    .step-description {
+        color: $text-secondary;
+        margin-bottom: $space-lg;
+        line-height: 1.6;
+    }
+}
+
+.instructions {
+    ol {
+        padding-left: $space-lg;
+        line-height: 1.8;
+
+        li {
+            margin-bottom: $space-sm;
+            color: $text-primary;
+        }
+    }
+}
+
+.target-display {
+    background: $bg-surface;
+    border-radius: $radius-md;
+    padding: $space-lg;
+    margin: $space-lg 0;
+
+    .target-value {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $space-sm 0;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .target-label {
+        color: $text-secondary;
+        font-size: 0.9rem;
+    }
+
+    .target-number {
+        font-family: 'Courier New', monospace;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $text-primary;
+
+        &.highlight {
+            color: $gold-primary;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.info-table {
+    margin: $space-lg 0;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: $bg-surface;
+        border-radius: $radius-md;
+        overflow: hidden;
+
+        th, td {
+            padding: $space-sm $space-md;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        th {
+            background: rgba(0, 0, 0, 0.2);
+            color: $gold-primary;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            color: $text-primary;
+            font-size: 0.95rem;
+        }
+    }
+}

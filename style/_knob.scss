@@ -1,0 +1,82 @@
+@use 'variables' as *;
+
+.knob-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-sm;
+    user-select: none;
+    touch-action: none;
+    padding: $space-sm;
+
+    &.disabled {
+        opacity: 0.35;
+        pointer-events: none;
+    }
+}
+
+.knob-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $text-secondary;
+    text-align: center;
+}
+
+.knob-body {
+    width: 80px;
+    height: 80px;
+    border-radius: $radius-full;
+    background: radial-gradient(circle at 40% 35%, #555, #2a2a2a);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.5),
+        inset 0 1px 2px rgba(255, 255, 255, 0.1),
+        0 0 0 3px #1a1a1a,
+        0 0 0 5px #333;
+    position: relative;
+    cursor: grab;
+    transition: box-shadow $transition-fast;
+
+    &:active {
+        cursor: grabbing;
+        box-shadow:
+            0 2px 6px rgba(0, 0, 0, 0.5),
+            inset 0 1px 2px rgba(255, 255, 255, 0.1),
+            0 0 0 3px #1a1a1a,
+            0 0 0 5px $gold-dark;
+    }
+
+    // Scale markings around the knob
+    &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+        border-radius: $radius-full;
+        border: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+}
+
+.knob-indicator {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 18px;
+    background: $gold-primary;
+    border-radius: 2px;
+    box-shadow: 0 0 4px rgba($gold-primary, 0.5);
+}
+
+.knob-value {
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    color: $gold-light;
+    min-width: 40px;
+    text-align: center;
+}

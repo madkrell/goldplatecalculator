@@ -1,0 +1,110 @@
+@use 'variables' as *;
+
+.plating-timer {
+    background: $bg-surface;
+    border-radius: $radius-md;
+    padding: $space-lg;
+    margin: $space-lg 0;
+    text-align: center;
+}
+
+.timer-config {
+    display: flex;
+    gap: $space-lg;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: $space-lg;
+}
+
+.gold-type-selector {
+    display: flex;
+    gap: $space-sm;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .gold-type-btn {
+        padding: $space-sm $space-md;
+        background: $bg-card;
+        border: 2px solid transparent;
+        border-radius: $radius-md;
+        color: $text-secondary;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: all $transition-fast;
+
+        &:hover {
+            border-color: rgba($gold-primary, 0.3);
+        }
+
+        &.active {
+            border-color: $gold-primary;
+            color: $gold-primary;
+            background: rgba($gold-primary, 0.1);
+        }
+    }
+}
+
+.micron-input {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+
+    input {
+        width: 80px;
+        text-align: center;
+    }
+
+    .unit-label {
+        color: $text-muted;
+        font-size: 0.85rem;
+    }
+}
+
+.vermeil-preset {
+    .btn {
+        font-size: 0.8rem;
+    }
+}
+
+.timer-display {
+    margin: $space-lg 0;
+
+    .calculated-time {
+        font-size: 1rem;
+        color: $text-secondary;
+        margin-bottom: $space-sm;
+    }
+
+    .countdown {
+        font-family: 'Courier New', monospace;
+        font-size: 3rem;
+        font-weight: 700;
+        color: $gold-primary;
+        letter-spacing: 2px;
+
+        &.running {
+            color: $accent-green;
+        }
+
+        &.finished {
+            color: $accent-green;
+            animation: pulse 1s infinite;
+        }
+    }
+}
+
+.timer-controls {
+    display: flex;
+    gap: $space-md;
+    justify-content: center;
+
+    .btn {
+        min-width: 100px;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}

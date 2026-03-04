@@ -1,0 +1,63 @@
+@use 'variables' as *;
+
+.checklist {
+    margin: $space-md 0;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-sm;
+    padding: $space-sm $space-md;
+    margin-bottom: $space-xs;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    transition: background $transition-fast;
+    line-height: 1.5;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        border: 2px solid $text-muted;
+        border-radius: $radius-sm;
+        background: transparent;
+        cursor: pointer;
+        margin-top: 2px;
+        transition: all $transition-fast;
+        position: relative;
+
+        &:checked {
+            background: $accent-green;
+            border-color: $accent-green;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 5px;
+                top: 1px;
+                width: 6px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    span {
+        color: $text-primary;
+        font-size: 0.9rem;
+        transition: all $transition-fast;
+    }
+
+    &.checked span {
+        color: $text-muted;
+        text-decoration: line-through;
+    }
+}

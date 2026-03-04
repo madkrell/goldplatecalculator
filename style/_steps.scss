@@ -1,0 +1,68 @@
+@use 'variables' as *;
+
+.warning-banner {
+    background: rgba($danger, 0.15);
+    border: 1px solid rgba($danger, 0.3);
+    border-left: 4px solid $danger;
+    color: $accent-red;
+    padding: $space-md;
+    border-radius: $radius-sm;
+    margin: $space-lg 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.water-test {
+    background: $bg-surface;
+    border-radius: $radius-md;
+    padding: $space-lg;
+    margin: $space-lg 0;
+    text-align: center;
+
+    h3 {
+        margin-top: 0;
+    }
+
+    .test-buttons {
+        display: flex;
+        gap: $space-md;
+        justify-content: center;
+        margin: $space-lg 0;
+        flex-wrap: wrap;
+    }
+}
+
+.test-result {
+    margin-top: $space-md;
+    padding: $space-md;
+    border-radius: $radius-md;
+
+    &.pass {
+        background: rgba($success, 0.1);
+        border: 1px solid rgba($success, 0.3);
+        color: $accent-green;
+    }
+
+    &.fail {
+        background: rgba($danger, 0.1);
+        border: 1px solid rgba($danger, 0.3);
+        color: $accent-red;
+
+        .btn {
+            margin-top: $space-md;
+        }
+    }
+
+    &.pending {
+        background: rgba(255, 255, 255, 0.03);
+        color: $text-muted;
+        font-style: italic;
+    }
+}
+
+.finish-actions {
+    text-align: center;
+    margin-top: $space-xl;
+    padding-top: $space-lg;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

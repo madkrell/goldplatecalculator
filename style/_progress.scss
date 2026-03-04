@@ -1,0 +1,85 @@
+@use 'variables' as *;
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: $space-sm 0;
+    position: relative;
+    overflow-x: auto;
+
+    // Connecting line between steps
+    &::before {
+        content: '';
+        position: absolute;
+        top: 16px;
+        left: 24px;
+        right: 24px;
+        height: 2px;
+        background: $bg-surface;
+        z-index: 0;
+    }
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-xs;
+    cursor: pointer;
+    z-index: 1;
+    flex-shrink: 0;
+    min-width: 60px;
+    transition: opacity $transition-fast;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    .step-circle {
+        width: 32px;
+        height: 32px;
+        border-radius: $radius-full;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: 700;
+        background: $bg-surface;
+        color: $text-muted;
+        border: 2px solid $bg-surface;
+        transition: all $transition-normal;
+    }
+
+    .step-label {
+        font-size: 0.65rem;
+        color: $text-muted;
+        text-align: center;
+        max-width: 70px;
+        transition: color $transition-normal;
+    }
+
+    &.active {
+        .step-circle {
+            background: $gold-primary;
+            color: $bg-primary;
+            border-color: $gold-primary;
+            box-shadow: 0 0 12px rgba($gold-primary, 0.4);
+        }
+        .step-label {
+            color: $gold-primary;
+            font-weight: 600;
+        }
+    }
+
+    &.completed {
+        .step-circle {
+            background: $accent-green;
+            color: white;
+            border-color: $accent-green;
+        }
+        .step-label {
+            color: $accent-green;
+        }
+    }
+}
