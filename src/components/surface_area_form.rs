@@ -267,9 +267,8 @@ pub fn SurfaceAreaForm() -> impl IntoView {
                         <div class="form-group">
                             <label>"Length (cm)"</label>
                             <input
-                                type="number"
-                                step="0.1"
-                                min="0"
+                                type="text"
+                                inputmode="decimal"
                                 placeholder="0"
                                 prop:value=move || length.get()
                                 on:input=move |ev| length.set(event_target_value(&ev))
@@ -278,9 +277,8 @@ pub fn SurfaceAreaForm() -> impl IntoView {
                         <div class="form-group">
                             <label>"Width (cm)"</label>
                             <input
-                                type="number"
-                                step="0.1"
-                                min="0"
+                                type="text"
+                                inputmode="decimal"
                                 placeholder="0"
                                 prop:value=move || width.get()
                                 on:input=move |ev| width.set(event_target_value(&ev))
@@ -289,9 +287,8 @@ pub fn SurfaceAreaForm() -> impl IntoView {
                         <div class="form-group">
                             <label>"Height (cm)"</label>
                             <input
-                                type="number"
-                                step="0.1"
-                                min="0"
+                                type="text"
+                                inputmode="decimal"
                                 placeholder="0"
                                 prop:value=move || height.get()
                                 on:input=move |ev| height.set(event_target_value(&ev))
@@ -302,9 +299,8 @@ pub fn SurfaceAreaForm() -> impl IntoView {
                         <div class="form-group">
                             <label>"Radius (cm)"</label>
                             <input
-                                type="number"
-                                step="0.1"
-                                min="0"
+                                type="text"
+                                inputmode="decimal"
                                 placeholder="0"
                                 prop:value=move || radius.get()
                                 on:input=move |ev| radius.set(event_target_value(&ev))
@@ -313,9 +309,8 @@ pub fn SurfaceAreaForm() -> impl IntoView {
                         <div class="form-group">
                             <label>"Height (cm)"</label>
                             <input
-                                type="number"
-                                step="0.1"
-                                min="0"
+                                type="text"
+                                inputmode="decimal"
                                 placeholder="0"
                                 prop:value=move || height.get()
                                 on:input=move |ev| height.set(event_target_value(&ev))
@@ -326,9 +321,8 @@ pub fn SurfaceAreaForm() -> impl IntoView {
                         <div class="form-group">
                             <label>"Radius (cm)"</label>
                             <input
-                                type="number"
-                                step="0.1"
-                                min="0"
+                                type="text"
+                                inputmode="decimal"
                                 placeholder="0"
                                 prop:value=move || radius.get()
                                 on:input=move |ev| radius.set(event_target_value(&ev))
