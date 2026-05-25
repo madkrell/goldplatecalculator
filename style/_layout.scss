@@ -87,6 +87,13 @@ main {
     }
 }
 
+// Highlights time values (e.g. "40 seconds") within instruction text
+// and checklist items.
+.instruction-time {
+    color: $danger;
+    font-weight: 700;
+}
+
 .target-display {
     background: $bg-surface;
     border-radius: $radius-md;

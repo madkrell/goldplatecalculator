@@ -27,7 +27,7 @@ pub fn StepPalladium() -> impl IntoView {
                     <li>"Connect red lead to the anodes in your Palladium tank"</li>
                     <li>"Lower item into Palladium tank"</li>
                     <li>"Turn on the power at the machine (it already has the correct values set)"</li>
-                    <li>"Sway item gently while it plates - just enough so it never sits still"</li>
+                    <li>"Sway item gently while it plates - just enough so it never sits still "<span class="instruction-time">"for 40 seconds"</span></li>
                     <li>"Item should come out a straw-tinted silver colour, darker but just as shiny"</li>
                     <li>"Turn off the machine but "<strong>"DO NOT"</strong>" touch the dials"</li>
                     <li>"Rinse the item with deionised water"</li>

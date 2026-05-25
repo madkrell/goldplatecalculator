@@ -32,7 +32,7 @@ pub fn StepElectrocleanVoltage() -> impl IntoView {
                     <li>"Switch on machine and slowly raise "<strong>"coarse voltage"</strong></li>
                     <li>"Stop when EITHER volts read "<strong>"6V"</strong>" OR amps read "<strong>"8.00A"</strong>" (whichever comes first)"</li>
                     <li>"Use "<strong>"fine voltage"</strong>" dial to adjust small amounts"</li>
-                    <li>"Leave to fizz for "<strong>"3 minutes"</strong></li>
+                    <li>"Leave to fizz for "<span class="instruction-time">"3 minutes"</span></li>
                 </ol>
             </div>
 
